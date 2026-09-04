@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michele Lee | Public Policy & Accessibility Strategist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F9F8F6;
+            --text-main: #2C2A29;
+            --accent-sage: #68756A;
+            --card-bg: #FFFFFF;
+            --border-subtle: #E6E4E0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        header {
+            margin-bottom: 3.5rem;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--accent-sage);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio {
+            font-size: 1.05rem;
+            color: #555350;
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .contact-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-sage);
+            padding-bottom: 2px;
+            transition: color 0.2s;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-sage);
+        }
+
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border-subtle);
+            margin-left: 1rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(44, 42, 41, 0.04);
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .card-role {
+            font-size: 0.95rem;
+            color: var(--accent-sage);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #555350;
+        }
+
+        .card-link {
+            display: inline-block;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--accent-sage);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        /* PARTNERS / LOGOS GRID */
+        .logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .logo-pill {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            padding: 0.8rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
+            letter-spacing: -0.01em;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888682;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 1rem 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER / HERO -->
+        <header>
+            <h1>Michele Lee</h1>
+            <div class="tagline">Public Policy & Accessibility Strategist | Board Member & Advocate</div>
+            <p class="bio">
+                Pioneering universal design, accessible infrastructure, and inclusive mobility frameworks across autonomous systems, robotics, and public transit. Trusted governance voice, keynote speaker, and relationship builder dedicated to systemic equity and authentic disability representation.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:your-email@example.com">Get in Touch</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn Profile</a>
+            </div>
+        </header>
+
+        <!-- GOVERNANCE & PUBLIC LEADERSHIP -->
+        <section>
+            <h2>Governance & Public Sector Leadership</h2>
+            
+            <div class="card">
+                <div class="card-title">Chicago Transit Authority (CTA)</div>
+                <div class="card-role">Board Director (Chicago Transit Board)</div>
+                <div class="card-desc">Shaped public transit accessibility policy, station modernization efforts, and equitable transit expansion. Delivered high-profile remarks alongside civic leaders at major station openings.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Consumer Technology Association (CTA) Foundation</div>
+                <div class="card-role">Board of Trustees</div>
+                <div class="card-desc">Advised on national initiatives harnessing innovative consumer technology to empower seniors and individuals with disabilities.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Access Living & Disability Rights Advocates</div>
+                <div class="card-role">Board Governance & Advisory Roles</div>
+                <div class="card-desc">Contributed strategic oversight to premier civil rights and independent living organizations driving systemic accessibility change.</div>
+            </div>
+        </section>
+
+        <!-- STRATEGIC INNOVATION & AUTONOMOUS SYSTEMS -->
+        <section>
+            <h2>Strategic Impact & Industry Innovation</h2>
+
+            <div class="card">
+                <div class="card-title">Cruise</div>
+                <div class="card-role">Head of Accessibility Strategy & Business Development</div>
+                <div class="card-desc">Spearheaded the creation of the company's dedicated <strong>Accessibility Council</strong>. Partnered closely with disability community leaders, BraunAbility, and Q'STRAINT to design and pioneer the world’s first self-driving, wheelchair-accessible vehicle (WAV) roadmap, transforming autonomous transportation options for riders with disabilities.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Serve Robotics</div>
+                <div class="card-role">Public Policy & Accessibility Strategy</div>
+                <div class="card-desc">Advancing accessible sidewalk robot navigation, community co-design frameworks, and pedestrian right-of-way standards to build more inclusive, people-first urban environments.</div>
+            </div>
+        </section>
+
+        <!-- SPEAKING, MEDIA & THOUGHT LEADERSHIP -->
+        <section>
+            <h2>Speaking Engagements & Media Features</h2>
+
+            <div class="card">
+                <div class="card-title">National Media & Press Highlights</div>
+                <div class="card-role">Featured Thought Leader</div>
+                <div class="card-desc">Recognized nationally for corporate accessibility leadership—including features in <strong>Forbes</strong>—and extensively covered across Chicago local news for transit equity milestones and public advocacy.</div>
+                <a href="#" target="_blank">View Featured Articles &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Keynote Addresses & Ribbon Cuttings</div>
+                <div class="card-role">Public Speaker & Advocate</div>
+                <div class="card-desc">Delivered landmark remarks at the opening of accessible CTA Red and Blue Line stations, spoke on inclusion panels at national conferences (Disability:IN, HFES), and participated prominently in the Chicago Disability Pride Parade.</div>
+            </div>
+        </section>
+
+        <!-- PARTNER ECOSYSTEM -->
+        <section>
+            <h2>Key Partners & Collaborators</h2>
+            <p class="bio" style="font-size: 0.95rem; margin-bottom: 1rem;">Proud to have collaborated with leading organizations across technology, transit, and disability advocacy:</p>
+            <div class="logos-grid">
+                <div class="logo-pill">Cruise / GM</div>
+                <div class="logo-pill">Serve Robotics</div>
+                <div class="logo-pill">Chicago Transit Authority</div>
+                <div class="logo-pill">Access Living</div>
+                <div class="logo-pill">CTA Foundation</div>
+                <div class="logo-pill">Disability Rights Advocates</div>
+                <div class="logo-pill">BraunAbility</div>
+                <div class="logo-pill">Q'STRAINT</div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            &copy; 2026 Michele Lee. Designed with a clean, accessible California modern aesthetic.
+        </footer>
+    </div>
+
+</body>
+</html>
