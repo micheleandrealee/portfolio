@@ -40,6 +40,26 @@
             margin-bottom: 3.5rem;
             border-bottom: 1px solid var(--border-subtle);
             padding-bottom: 2.5rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .header-content {
+            grid-column: 1;
+        }
+
+        .header-photo {
+            grid-column: 2;
+        }
+
+        .header-photo img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid var(--border-subtle);
         }
 
         h1 {
@@ -68,6 +88,7 @@
             gap: 1.5rem;
             font-size: 0.95rem;
             font-weight: 500;
+            flex-wrap: wrap;
         }
 
         .contact-links a {
@@ -136,37 +157,97 @@
             color: #555350;
         }
 
-        .card-link {
+        .media-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .action-button {
             display: inline-block;
-            margin-top: 0.75rem;
-            font-size: 0.9rem;
-            color: var(--accent-sage);
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-subtle);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-main);
             text-decoration: none;
-            font-weight: 500;
+            transition: background-color 0.2s;
         }
 
-        .card-link:hover {
-            text-decoration: underline;
+        .action-button:hover {
+            background-color: #E6E4E0;
+            color: var(--text-main);
         }
 
-        /* PARTNERS / LOGOS GRID */
-        .logos-grid {
+        /* PHOTO GALLERY GRID */
+        .photo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .photo-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .photo-caption {
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #555350;
+        }
+
+        /* PARTNER ECOSYSTEM CARDS */
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 1rem;
             margin-top: 1rem;
         }
 
-        .logo-pill {
+        .partner-badge {
             background-color: var(--card-bg);
             border: 1px solid var(--border-subtle);
-            border-radius: 6px;
-            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            padding: 1.2rem 1rem;
             text-align: center;
-            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            transition: border-color 0.2s;
+        }
+
+        .partner-badge:hover {
+            border-color: var(--accent-sage);
+        }
+
+        .partner-name {
+            font-size: 0.95rem;
             font-weight: 600;
             color: var(--text-main);
             letter-spacing: -0.01em;
+        }
+
+        .partner-category {
+            font-size: 0.75rem;
+            color: var(--accent-sage);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
         }
 
         footer {
@@ -178,9 +259,19 @@
             padding-top: 2rem;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
+            header {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .header-photo {
+                grid-column: 1;
+                justify-self: center;
+            }
+            .contact-links {
+                justify-content: center;
+            }
             h1 { font-size: 2rem; }
-            .container { padding: 1rem 0.5rem; }
         }
     </style>
 </head>
@@ -189,14 +280,19 @@
     <div class="container">
         <!-- HEADER / HERO -->
         <header>
-            <h1>Michele Lee</h1>
-            <div class="tagline">Public Policy & Accessibility Strategist | Board Member & Advocate</div>
-            <p class="bio">
-                Pioneering universal design, accessible infrastructure, and inclusive mobility frameworks across autonomous systems, robotics, and public transit. Trusted governance voice, keynote speaker, and relationship builder dedicated to systemic equity and authentic disability representation.
-            </p>
-            <div class="contact-links">
-                <a href="mailto:your-email@example.com">Get in Touch</a>
-                <a href="https://linkedin.com" target="_blank">LinkedIn Profile</a>
+            <div class="header-content">
+                <h1>Michele Lee</h1>
+                <div class="tagline">Public Policy & Accessibility Strategist | Board Member & Advocate</div>
+                <p class="bio">
+                    Pioneering universal design, accessible infrastructure, and inclusive mobility frameworks across autonomous systems, robotics, and public transit. Trusted governance voice, keynote speaker, and relationship builder dedicated to systemic equity and authentic disability representation.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:michele.andrea.lee@gmail.com">michele.andrea.lee@gmail.com</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn Profile</a>
+                </div>
+            </div>
+            <div class="header-photo">
+                <img src="headshot.jpg" alt="Michele Lee professional headshot">
             </div>
         </header>
 
@@ -247,30 +343,74 @@
             <div class="card">
                 <div class="card-title">National Media & Press Highlights</div>
                 <div class="card-role">Featured Thought Leader</div>
-                <div class="card-desc">Recognized nationally for corporate accessibility leadership—including features in <strong>Forbes</strong>—and extensively covered across Chicago local news for transit equity milestones and public advocacy.</div>
-                <a href="#" target="_blank">View Featured Articles &rarr;</a>
+                <div class="card-desc">Recognized nationally for corporate accessibility leadership—including features in Forbes—and extensively covered across Chicago local news for transit equity milestones and public advocacy.</div>
+                <div class="media-links">
+                    <a href="#" target="_blank" class="action-button">Forbes Feature &rarr;</a>
+                    <a href="#" target="_blank" class="action-button">Chicago Local News &rarr;</a>
+                </div>
             </div>
 
             <div class="card">
                 <div class="card-title">Keynote Addresses & Ribbon Cuttings</div>
                 <div class="card-role">Public Speaker & Advocate</div>
                 <div class="card-desc">Delivered landmark remarks at the opening of accessible CTA Red and Blue Line stations, spoke on inclusion panels at national conferences (Disability:IN, HFES), and participated prominently in the Chicago Disability Pride Parade.</div>
+                <div class="media-links">
+                    <a href="#" target="_blank" class="action-button">Watch Speech / Coverage &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHOTO GALLERY -->
+        <section>
+            <h2>In Action & Representation</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="speaking-photo.jpg" alt="Michele Lee speaking at an accessibility event">
+                    <div class="photo-caption">Delivering remarks on transit accessibility and inclusive design.</div>
+                </div>
+                <div class="photo-card">
+                    <img src="advocacy-photo.jpg" alt="Michele Lee advocating for disability representation">
+                    <div class="photo-caption">Advocating for universal design and authentic representation.</div>
+                </div>
             </div>
         </section>
 
         <!-- PARTNER ECOSYSTEM -->
         <section>
             <h2>Key Partners & Collaborators</h2>
-            <p class="bio" style="font-size: 0.95rem; margin-bottom: 1rem;">Proud to have collaborated with leading organizations across technology, transit, and disability advocacy:</p>
-            <div class="logos-grid">
-                <div class="logo-pill">Cruise / GM</div>
-                <div class="logo-pill">Serve Robotics</div>
-                <div class="logo-pill">Chicago Transit Authority</div>
-                <div class="logo-pill">Access Living</div>
-                <div class="logo-pill">CTA Foundation</div>
-                <div class="logo-pill">Disability Rights Advocates</div>
-                <div class="logo-pill">BraunAbility</div>
-                <div class="logo-pill">Q'STRAINT</div>
+            <div class="partner-grid">
+                <div class="partner-badge">
+                    <span class="partner-name">Cruise / GM</span>
+                    <span class="partner-category">Autonomous Mobility</span>
+                </div>
+                <div class="partner-badge">
+                    <span class="partner-name">Serve Robotics</span>
+                    <span class="partner-category">Sidewalk Delivery</span>
+                </div>
+                <div class="partner-badge">
+                    <span class="partner-name">Chicago Transit Authority</span>
+                    <span class="partner-category">Public Transit</span>
+                </div>
+                <div class="partner-badge">
+                    <span class="partner-name">Access Living</span>
+                    <span class="partner-category">Civil Rights Advocacy</span>
+                </div>
+                <div class="partner-badge">
+                    <span class="partner-name">CTA Foundation</span>
+                    <span class="partner-category">Consumer Tech</span>
+                </div>
+                <div class="partner-badge">
+                    <span class="partner-name">Disability Rights Advocates</span>
+                    <span class="partner-category">Legal & Policy</span>
+                </div>
+                <div class="partner-badge">
+                    <span class="partner-name">BraunAbility</span>
+                    <span class="partner-category">Vehicle Engineering</span>
+                </div>
+                <div class="partner-badge">
+                    <span class="partner-name">Q'STRAINT</span>
+                    <span class="partner-category">Securement Systems</span>
+                </div>
             </div>
         </section>
 
