@@ -182,6 +182,41 @@
             color: var(--text-main);
         }
 
+        /* NEWS LIST STYLING */
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .news-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--bg-color);
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-subtle);
+            font-size: 0.95rem;
+        }
+
+        .news-item span {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .news-item a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .news-item a:hover {
+            color: var(--accent-sage);
+            text-decoration: underline;
+        }
+
         /* PHOTO GALLERY GRID */
         .photo-grid {
             display: grid;
@@ -278,7 +313,6 @@
 <body>
 
     <div class="container">
-        <!-- HEADER / HERO -->
         <header>
             <div class="header-content">
                 <h1>Michele Lee</h1>
@@ -296,7 +330,22 @@
             </div>
         </header>
 
-        <!-- GOVERNANCE & PUBLIC LEADERSHIP -->
+        <section>
+            <h2>Strategic Impact & Industry Innovation</h2>
+
+            <div class="card">
+                <div class="card-title">Cruise</div>
+                <div class="card-role">Head of Accessibility Strategy & Business Development</div>
+                <div class="card-desc">Spearheaded the creation of the company's dedicated <strong>Accessibility Council</strong>. Partnered closely with disability community leaders, BraunAbility, and Q'STRAINT to design and pioneer the world’s first self-driving, wheelchair-accessible vehicle (WAV) roadmap, transforming autonomous transportation options for riders with disabilities.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Serve Robotics</div>
+                <div class="card-role">Public Policy & Accessibility Strategy</div>
+                <div class="card-desc">Advancing accessible sidewalk robot navigation, community co-design frameworks, and pedestrian right-of-way standards to build more inclusive, people-first urban environments.</div>
+            </div>
+        </section>
+
         <section>
             <h2>Governance & Public Sector Leadership</h2>
             
@@ -319,48 +368,42 @@
             </div>
         </section>
 
-        <!-- STRATEGIC INNOVATION & AUTONOMOUS SYSTEMS -->
         <section>
-            <h2>Strategic Impact & Industry Innovation</h2>
-
+            <h2>Michele in the News</h2>
             <div class="card">
-                <div class="card-title">Cruise</div>
-                <div class="card-role">Head of Accessibility Strategy & Business Development</div>
-                <div class="card-desc">Spearheaded the creation of the company's dedicated <strong>Accessibility Council</strong>. Partnered closely with disability community leaders, BraunAbility, and Q'STRAINT to design and pioneer the world’s first self-driving, wheelchair-accessible vehicle (WAV) roadmap, transforming autonomous transportation options for riders with disabilities.</div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">Serve Robotics</div>
-                <div class="card-role">Public Policy & Accessibility Strategy</div>
-                <div class="card-desc">Advancing accessible sidewalk robot navigation, community co-design frameworks, and pedestrian right-of-way standards to build more inclusive, people-first urban environments.</div>
-            </div>
-        </section>
-
-        <!-- SPEAKING, MEDIA & THOUGHT LEADERSHIP -->
-        <section>
-            <h2>Speaking Engagements & Media Features</h2>
-
-            <div class="card">
-                <div class="card-title">National Media & Press Highlights</div>
-                <div class="card-role">Featured Thought Leader</div>
-                <div class="card-desc">Recognized nationally for corporate accessibility leadership—including features in Forbes—and extensively covered across Chicago local news for transit equity milestones and public advocacy.</div>
-                <div class="media-links">
-                    <a href="https://www.forbes.com/sites/stevenaquino/2023/03/03/cruise-accessibility-program-manager-michele-lee-talks-autonomous-cars-and-new-accessibility-council-in-interview/" target="_blank" class="action-button">Forbes Feature &rarr;</a>
-                    <a href="#" target="_blank" class="action-button">Chicago Local News &rarr;</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">Keynote Addresses & Ribbon Cuttings</div>
-                <div class="card-role">Public Speaker & Advocate</div>
-                <div class="card-desc">Delivered landmark remarks at the opening of accessible CTA Red and Blue Line stations, spoke on inclusion panels at national conferences (Disability:IN, HFES), and participated prominently in the Chicago Disability Pride Parade.</div>
-                <div class="media-links">
-                    <a href="https://www.youtube.com/live/Ysh17bupbbw?si=mRvcDXeDJm8mDL8m&t=137" target="_blank" class="action-button">Watch Speech / Coverage &rarr;</a>
+                <div class="card-title">Media & Advocacy Highlights</div>
+                <div class="card-role">Press & Public Impact</div>
+                <div class="card-desc">Featured nationally and locally for corporate accessibility leadership, autonomous vehicle innovation, and broader public transit advocacy.</div>
+                
+                <div class="news-list">
+                    <div class="news-item">
+                        <span>Forbes Feature (Accessibility Leadership)</span>
+                        <a href="#" target="_blank">Read Article &rarr;</a>
+                    </div>
+                    <div class="news-item">
+                        <span>Chicago Local News Coverage (Transit Equity)</span>
+                        <a href="#" target="_blank">Read Article &rarr;</a>
+                    </div>
+                    <div class="news-item">
+                        <span>Additional Advocacy & Public Speaking Feature</span>
+                        <a href="#" target="_blank">Read Article &rarr;</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- PHOTO GALLERY -->
+        <section>
+            <h2>Keynote Addresses & Speaking Engagements</h2>
+            <div class="card">
+                <div class="card-title">Public Speaker & Advocate</div>
+                <div class="card-role">Conferences & Ribbon Cuttings</div>
+                <div class="card-desc">Delivered landmark remarks at the opening of accessible CTA Red and Blue Line stations, spoke on inclusion panels at national conferences (Disability:IN, HFES), and participated prominently in community advocacy events.</div>
+                <div class="media-links">
+                    <a href="#" target="_blank" class="action-button">Watch Speech / Coverage &rarr;</a>
+                </div>
+            </div>
+        </section>
+
         <section>
             <h2>In Action & Representation</h2>
             <div class="photo-grid">
@@ -375,7 +418,6 @@
             </div>
         </section>
 
-        <!-- ORGANIZATIONS I'VE PARTNERED WITH -->
         <section>
             <h2>Organizations I've Partnered With</h2>
             <div class="partner-grid">
@@ -430,7 +472,6 @@
             </div>
         </section>
 
-        <!-- FOOTER -->
         <footer>
             &copy; 2026 Michele Lee. Designed with a clean, accessible California modern aesthetic.
         </footer>
